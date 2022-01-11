@@ -6,4 +6,4 @@ export const Container = styled.div`
   padding-left: 15px;
   padding-right: 15px;
   text-align: center;
-`
+`;

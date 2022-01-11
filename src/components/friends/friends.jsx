@@ -5,7 +5,7 @@ import {
     Status,
     Image,
     FriendName
-} from './friends.styled';
+} from './Friends.styled';
 
 export const FriendList = ({ friends }) => {
     return (

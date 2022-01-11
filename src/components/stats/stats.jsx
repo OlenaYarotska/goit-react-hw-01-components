@@ -5,14 +5,13 @@ import {
     StatItems,
     StatsLabel,
     Percentage
-} from './stats.styled';
+} from './Stats.styled';
 import propTypes from 'prop-types';
 
 export const Statistics = ({ title, stats }) => {
     return (
         <SectionStats>
-            <SectionTitle>{title}</SectionTitle>
-
+           {title ? <SectionTitle>{title}</SectionTitle> : ''}
             <StatList>
                 {stats.map(({ label, percentage, id }) => {
                     return (
@@ -20,7 +19,6 @@ export const Statistics = ({ title, stats }) => {
                             <StatsLabel>{label}</StatsLabel>
                             <Percentage>{percentage}%</Percentage>
                         </StatItems>
-
                     );
                 }
                 )}
