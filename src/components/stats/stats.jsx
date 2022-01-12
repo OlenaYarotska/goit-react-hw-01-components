@@ -11,7 +11,7 @@ import propTypes from 'prop-types';
 export const Statistics = ({ title, stats }) => {
     return (
         <SectionStats>
-           {title ? <SectionTitle>{title}</SectionTitle> : ''}
+           {title && <SectionTitle>{title}</SectionTitle>}
             <StatList>
                 {stats.map(({ label, percentage, id }) => {
                     return (
@@ -27,6 +27,6 @@ export const Statistics = ({ title, stats }) => {
     )
 };
 Statistics.propTypes = {
-    title: propTypes.string.isRequired,
+    title: propTypes.string,
     stats: propTypes.array.isRequired,
 };
